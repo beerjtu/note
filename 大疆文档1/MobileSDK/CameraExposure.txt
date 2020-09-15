@@ -1,0 +1,46 @@
+Capture Light:
+light Sensor(consists of many pixels)
+
+Resolve the Image:
+When very small, the Aperture restricts the amount of light hitting the sensor to a minimum, but also lets the camera capture the entire scene in focus, as each pixel can only see a small part(feature) of the scene.
+ 
+Capture Time:
+Between the Sensor and the Aperture is a shutter.
+
+Exposure:
+The more light that the pixel is exposed, the brighter the pixel will be in the resulting picture.
+Under Exposed, Good Exposed, Over Exposed.
+Described by Stops(光圈系数), which is a relatibe measure where one Stop describes a doubling or halving of light.
+Doubling the light(increasing the exposure by one Stop) can be Compensated by Half the light (decreasing the exposure by one Stop).
+
+Q:how can be exposure be changed?
+
+Shutter Speed(proportional to exposure):
+Fast moveing object(peopellors) with slow Shutter Speed, the picture will be blur.
+Changing the shutter speed alse change the exposure. To make the both images (slow and fast shutter speed) have the same exposure, ISO was applied to comopensate.
+DJI's Zenmuse X5 camera has a shutter speed range of 1/8000 seconds(fast) to 8 seconds(slow).
+
+ISO(proportional to exposure):
+Pixel Amplification is called ISO. Increasing ISO will increase exposure, but will also make the noise in the image more Noticeable resulting in grainy pictures.
+Typically ISO is set as LOW as possible to achieve the Cleanest image and is used to increase exposure as a Last Resort.
+DJI's Zenmuse X5 has an ISO range from 100(low noise) to 25600(high noise)
+
+Aperture:
+Another way to increase the aperture.
+f-number(f-stops), f/1.4 is large aperture and f/22 is a small aperture.
+f-number(N) = lens focal length(f) / aperture diameter(D)
+written as f/N
+To double the amount of light, the aperture aera must be doubled, the D increases by a factor of 1.414(square root of 2), N decreases by a factor of 1/1.414.
+A lens can be used to bring parts of the scene back into focus.
+Depth of Field(景深) - The difference in focus between features at different distances from the camera
+smaller aperture, deeper depth of field.
+DJI's Zenmuse X5 has an aperture ajustable from f/1.7(large) to f/16 (small)
+
+Trade-off Between Aperture, Shutter, ISO:
+Aperture, shutter speed and ISO need to balanced to achieve a good exposure.
+
+Field of View and Focal Length:
+The Field of view defines the extent of a scene a camera can capture and is measured in degrees.
+Focal length - the distance between a lens and its focal plane(the sensor is at the focal plane).
+As the focal length increases, the field of view decreases.
+

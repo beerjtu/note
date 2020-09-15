@@ -1,0 +1,19 @@
+class DJISDKManager:
+Application registration, product connection, debugging and logging service
+provides the instance of the product connected to the mobile device, can access the control, state and components.
+
+Registration:
+the first time, the mobile device need to hava an Internet Connection. After that, the result will be locally cached on the mobile device.
+
+Aircraft Product:
+Gimbal, Camera, Airlink, RemoteController, Battery, Flight Controller
+
+Product Connection:
+Once registered, the application can be connected to the product.
+The class method startConnectionToProduct can be used to initiate the connection between application and product.
+The SDK Manager can close the connection when desired.
+Once connected, the SDK Manager provides an instance to the connected product(to control and receive state information of the components of the product).
+
+Debug Mode and Bridge App:
+
+Remote Logging:

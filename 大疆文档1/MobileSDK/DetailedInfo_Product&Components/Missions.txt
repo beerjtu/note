@@ -1,0 +1,38 @@
+to automate flight.
+some missions can be uploaded to and managed by the Aircraft, while other missions are managed from the Mobile Devices.
+Missions run from Mobile Device can offer more complex or customizable behavior, however they are depend on the stability of wireless link.
+Aircraft Missions will be less customizable and be limited by aircraft memory, but be able to continue when there is a loss in the wireless link.
+
+Mission Control:
+Single missions can be run through Dedicated Mission Operators
+a series of missions and actions can be run serially using the Timeline
+
+Waypoint Mission(uploaded to aircraft, waypoint<99):
+is a series of pre-defined locations(Waypoints, is a latitude, longitude and altitude).
+Aircraft heading and altitude can be manually adjusted either gradully or at the waypoint itself.
+A series of actions(scch as take photo) can be executed at each waypoint.
+
+Hot Point Mission:
+the aircraft will be repeatedly fly circles of a constant radius around a specified point called a Hot Point.
+Altitude, heading and radius can be manually adjusted.
+
+Follow Me Mission:
+the aircraft will follow GPS coordinate continually sent to the aircraft maintaining separation and a constant altitude.
+Will Hover, when lose GPS coordinate > 6s
+
+Active Track Mission(notice the steps):
+aircraft tracks a moving subject using vision system and without a GPS tracker on the subject.
+Steps:
+1.
+2.
+3.
+3 modes - 1.Trace Mode 2.Profile Mode 3.Spotlight Mode
+
+TapFly Mission:
+the aircraft flies in the direction of a point on the video stream that the user chooses.
+3 modes - 1.TapFly Forward 2.TapFly Backward 3.TapFly Free
+
+Panorama Mission(only supported on OSMO):
+to rotate camera 180/360 degrees while taking photos
+can be downloaded to render a panorama. Full circle mode(take 8 photos), half circle mode(5 photos
+the images must be stitched manually, will be stored on the SD card.

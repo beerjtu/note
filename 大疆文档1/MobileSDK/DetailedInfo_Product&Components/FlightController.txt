@@ -1,0 +1,81 @@
+Flight Controller:
+is an Onboard Computer that combines control information from the pilot with sensor information to adjust the thrust at each propellor and fly the aircraft desired.
+(1)Flight control including motor control, taking off and landing, manual flight modes.
+(2)Aircraft state information such as attitude(roll, pitch, yaw angles), position, speed.
+(3)Sensor subcomponents such as compasses, IMUs(inertia measurement unit), and positioning systems.
+(4)Aircraft subcomponents such as landing gear.
+(5)Flight limitation systems such as GEO Zones and GEO systems.
+(6)Aircraft flight simulation for testing and debugging.
+
+Note:
+The orientation of the aircraft and gimbal is known as its ATTITUDE and defined by the rotation around the pitch, roll and yaw axes in the body coordinate system.
+
+State:
+The flight controller provide detailed state information at up to 10 Hz.
+1.Aircraft position, velocity, and altitude
+2.Remaining Battery and Flight Tiem Information
+3.Home Location
+4.Sensor Information(Compass, IMU, Satellite positioning)
+5.Return Home Status
+6.Whether Motors are ON and Aircraft is flying or not
+7.Flight Limitation and GEO system information
+
+Flying:
+1.Motor Control - Motors can be turned ON and OFF in the DJI Mobile SDK.(notice limitations)
+2.Begining and Ending FLights - Aircraft take-off and landing can be automated through APIs in the DJI Mobile SDK.
+3.Flight Control - (1)Manually: remote controller control sticks. (2)Missions: Simple high level flight automation. (3)Virtual Sticks: Stick commands can be sent using DJI Mobile SDK that simulate manual flight. (4)Gestures: 
+4.Flight Orientation - Three Orientation Modes:(1)Course Lock: The aircraft moves relative to a locked course heading. (2)Home Lock: ~ relative radially to Home Point. (3)Aircraft Heading: ~ relative to the front of the aircraft.
+5.Flight Limitation - Maximum aircraft attitude and Distance from Home Limitation, can be query and changed through the DJI Mobile SDK.
+6.Geospatial Environment Online(GEO) - The GEO system is a best-in-class geospatial information system that provides drone operators with information that will help them make smart decisions about where and when to fly
+
+Sensors:
+1.Compass - Compass Calibration require user to rotate the aircraft vertically and horizontally through the Azimuth(方位角)
+2.IMU(Inertia Measurement Unit) - contains an accelerator (linear acceleraton) and gyroscopes(angular velocity). sensitive to temperature and need recalibration. its status is in the flight controller state data. Calibration can be initiated by DJI Mobile SDK when required.
+3.RTK Positioning System - DJI built-in consumer satellite positioning systems that use GPS and GLONASS satellite constellations(several meters precision). DJI RTK positioning system(accessory, cm precision, base station at a known lacation on the ground and mobile station on the aricraft), The mobile station comes with two antennas which can be deployed on opposite sides of the aircraft(more accurate the compass). 
+
+Vision System and Intelligent Flight Assistant:
+1.Obstacle Avoidance - Stereo Cameras vision system to determine the depth of an environment.
+2.Positioning - Downward facing cameras to determine relative position and velocity (more accurate than satellite positioning system), indoor environment.
+3.Intelligent Flight Assistant - provided by DJI SDK that gives access to state info of the obstacle avoidance and positioning vision systems.
+
+Landing Gear:
+1.Automatically
+2.Programmatically
+trasport mode
+
+Flight Time and Battery Threholds:
+the flight controller an smart battery will work together to estimate the remaining time of the current flight based on data collected during in flight. also provide return home battery percentage.
+two manual bettery threholds: 1.Return to home: 25%- 50%, return home warning, can be concelled by Return Home button on the remote controller.
+2.Land in place: 10%-25%, will immediately land the aircraft if crossed
+
+Returning Home:
+1.Smart RTH(return-to-home) - Commanded by the pilot through the application or remote controller.(Return Home button)
+2.Failsafe RTH - wireless link between remote controller and aircraft lost (> 3s).
+3.Low Battery RTH - battery precentage below threshold.
+Home point(first take-off position) can be updated by DJI SDK (many limitations: within 30m of initial take-off location, current aircraft's location, current mobile location, or current remote controller's location)
+
+Lost of Wireless Link:
+lost time > 3s, perform a failsafe behavior(three options):
+1.Failsafe RTH
+2.Hoving in position
+3.Landing in position
+
+OnBoard SDK Communication:
+Application<---->DJI Mobile SDK<--wireless-->DJI Onboard SDK Apps
+Mobile SDK can detect if an Onboard SDK App is connected to the flight controller, and both send and receive data to it. Data<100B, 40B/14ms.
+
+Simulator:
+flight controller supports a simulation mode for faster, safeer development of applications. 
+Simulator can be started  and stopped using the DJI Mobile SDK.
+a Windows Application ca be used to visualize the simulated flight.
+
+Virutal Sticks:
+Virtual Stick Functions in the SDK simulate the remote controller's Joysticks.
+Compared to missions, is more complicated, but flexible way to automate flight.
+Coordinate System: Ground and Body
+Roll Pitch Control Mode - X/Y velocities, or Roll/Pitch angles
+Yaw Control Mode - 1.Angular Velocity Mode(the speed of rotation, degree/s) 2.Angle Mode(angle in the Ground Coordinate System)
+
+
+
+

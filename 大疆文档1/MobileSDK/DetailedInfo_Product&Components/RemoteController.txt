@@ -1,0 +1,29 @@
+Controller Input:
+Has sticks, wheels, switchs and buttons that give control. Has a USB connector for mobile Devices. And Sometimes additional video output ports to connect with external video equipment.
+
+Control Sticks:
+Mode 1, Mode 2(default,[Throttle, Yaw], [Pitch, Roll]), Mode 3
+
+Flight Mode:
+1.P-Mode (Positioning) - the aircraft uses all positioning aids (GPS, the Vision pisitioning system and Obstacle avoidance system) that available to fly. Enables advanced features (Misisons, Virtual Sticks and Intelligent Orientation Control) on No-F-Mode controllers. Notice, on remote controllers that do have F-Mode, the advanced features are disabled.
+2.A-Mode (Attitude) - the aircraft do not use any positioning aids to fly. Only the barometer is used to track altitude. On advanced features are anabled in this mode. Can be used to regain Manual COntrol from Automated flight.
+3.F-Mode (Fuction) - the aircraft uses all positioning aids and also enables advanced features. If manual control needs to be regained by polit while executing Missions ot Virtual Stick Commands, the Flight Mode Switch should be moved out of F-Mode.
+4.S-Mode (Sport) - uses all positioning aids, adjusts the handling gain values of the aircraft in order to enhance the maneuverability, and increases the maxium flight speed to 20m/s. The Obstacle Avoidance System is disabled in S-mode. Can be used to regain manual control from automated flight.
+
+Linking: 
+To link, the remote controller must be put in linking mode(through DJI Go or the DJI Mobile SDK APIs).
+
+Master/Slave Control:
+dual remote controllers. Master for flight control, the slave receives video from the aircraft, but communicates with the master remote controller to relay gimbal and camera control.
+To operate in this mode, the remote controller must be put in master/slave mode, and then wirelessly linked together using either DJI Go or the DJI mobile SDK APIs.
+
+Custom Buttons:
+2 custom buttons on the back of the remote controller. The custom buttons do not communicate with the aircraft, and only available for mobile applications. Custom button state(pressed/not pressed) is available in the DJI Mobile SDK, so users ...
+
+Mobile Remote Controller [Only supported by Mavic Pro and Spark using WiFi]:
+A simulated remote controller on the mobile device. Only support Mode 2 control style and P-Mode.
+
+Remote Controller GPS Accessory [Only supported by Inspire 2]:
+improves the accuracy of thre remote controller's positioning.
+
+

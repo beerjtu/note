@@ -1,0 +1,17 @@
+*2.Obstacle Detection Status：RadarWidget
+5.AirSense Status
+8.Focus/Metering Button: 不能按过之后，切换Focus/Metering模式
+12.Zoom:按了之后进入zoom模式
+15.More Setting:弹出很多设置，不知道有没有现成的控件
+19.Gimbal Silder: 显示云台倾斜角度
+21.Manual Focus：与10.AF/MF有关,代码中有，但是没显示（原因未知）
+22.PlayBack
+24.FPV Camera/Gimbal Camera Preview:现在只能显示Gimbal
+25.Zoom Menu
+26.Flight Telemetry: 少经纬度和SD卡余量
+27.Map
+*28.Beacon： BeaconWidget
+29.Gimbal Stabilization
+30.Gimbal Operation Mode
+*31.Spotlight Pro: SpotlightPanel
+32.Back

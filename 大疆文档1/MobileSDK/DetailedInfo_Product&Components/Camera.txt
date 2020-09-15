@@ -1,0 +1,51 @@
+Operation(Work) Modes (camera can only in one mode at one time):
+1.Still Image Capture
+2.Video Capture
+3.Playback
+4.Media Download
+5.Broadcast
+Still Image Capture Modes - Single, Burst, RAW Burst, HDR(High Dynamic Range), AEB(Auto Exposure Bracketing), Interval, Timelapse
+Quick View
+
+Image Quality, Resolution and Frame Rate:
+Video Resolution and Frame Rate - Resolutions(1280x720 (720p), 1920x1080 (1080p), 2704x1520, 3840x2160 and 4096x2160 (4K)), Resolution will determine the maximum frame rate. The combination of resolution and frame rate can be queried directly in the SDK.
+Still Image Resolution and Aspect Ratio - fixed still image resolution, aspect ratio(4:3 or 16:9, 16:9 is a cropped version of 4:3)
+
+Exposure Options:
+1.Shutter Speed: should bot be set slower than the video frame rate
+2.ISO: the amount of amplification appied to each pixel.
+3.Aperture: Increasing the aperture, increase the exposure, make the depth of field shallower.
+4.Exposure Mode: Program(automatically to find the best exposure), Shutter Priority(manually set the shutter speed, other 2 automatically), Aperture Priority(manually set the aperture), Manual(all 3 are mannually set)
+5.Exposure Compensation:
+6.AE(Auto Exposure) Metering:
+7.AE Lock: allow a freez of exposure setting changes
+
+Picture Settings:
+1.White Balance and Color Temperature - An outside scene and inside scene(cooler) can be ajusted to have more similar colors if the white balacne of the picture are adjusted. The SDK offers related settings [Auto white balacne, Preset White balacne, Custom color temperature]
+2.Anti-Flicker(防闪烁) - Light sources flicker frequency(50-60HZ, due to power source frequency). SDK Setting [manually, automatic]
+3.Sharpness(清晰度) - The sharpness factors[shutter speed, lens design and manufactoring quality, aperture, focal length, distance from the image cemnter and the sensor], A picture can be further sharpened or soften using high and low pass filter(高低通过滤器),Sharpen(highlight changes in brightness, emphasize the details, therefore increase the noise), Soften(reduce changes in brightness, reduce noise, also make finer detail harder to see), SDK Setting [Standard, Hard, Soft]
+4.Contrast - is the Difference or Gradient of Color and Brightness. larger contrast, more vivid, also reduce the amount of detial. SDK Setting [Standard, Hard, Soft]
+5.Hue(色调) and Saturation(饱和度): Hue is another word for a pure color. Saturation is the amount of grey in color(lower saturation, more grey in coloer, vice versa -> less grey, more pure and vivid, also look false). On the color wheel, the outside has complete color saturation, and is the Hue. The center of the color wheel is grey, and is no saturation.
+6.Digital Filter: DJI Camera include several built-in filters like Oil Painting, Water Color, Art etc.
+
+Lens and Focus:
+DJI cameras with variable focus allow both Manual(programmatically setting the Foucs Ring Value, 对焦圈值) and Automatic focusing.
+When using a lens for the 1st time, a calibration(Set focus mode to auto, Point the camera at distant scene, Ensure the focus target area is pointing at features >30m away, Let the camera auto focus, Read the minimum focus ring value) needs to be done. This Foucs Ring Value can be tied to the serial number of the camera.
+
+Live Video Feed:
+using Mobile SDK, can get live H.264(vidoe coding format) video data. Live video stream is typically 720p to conserve wireless bandwidth.
+
+Broadcast Mode [Notice]:
+Only supported by Inspire 2. allow videos to be streamed from the Inspire 2 in broadcast standard 720p60(NTSC) or 1080i50(PAL). Once connected to broadcasting equipment, footage can be sent live on-air without signal conversion.
+
+Palyback Manager:
+The live video stream is replaced with a media preview stream. 
+Commands - View single previews or as pages of smaller thumbnails, Navigate single and page reviews, Select and deselect files, Delete files, Play/Pause/Stop video previews, Download files.
+
+Media Manager:
+is used to interact with the file system on the SD card. VIa this, can read Metadata of files, download or delete files.
+
+Media:
+DJI camera typically use SD cards to store photos and videos.
+Zenmuse X5 RAW also has 512G SSD.
+2 File Index Modes for storing media: Reset and Sequence.??

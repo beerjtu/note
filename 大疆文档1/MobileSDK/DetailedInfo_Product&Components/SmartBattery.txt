@@ -1,0 +1,17 @@
+1.estimate remaining flight time 2.provide warning when low battery thresholds are crossed
+
+Battery Parameters:
+1.the amount of energy it can store when fully charged.
+2.the amount of energy it currently has remaining.
+
+Instantaneous Parameters:
+remaing energy, voltage, and predicted remaining flight time.
+
+Lifetime Parameters:
+total number of cycles, full charge energy, and remaining life time(when to replace battery)
+
+Battery Aggregation:
+A multi-battery system is strong as its weakest link. Therefore for most efficiency, it's important to make sure all batteries in the system are performing similiarly.
+
+
+

@@ -1,0 +1,3 @@
+打开到夜神安装目录（如cd D:\Program Files\NOX\Nox\bin），
+
+（4）执行命令：nox_adb.exe connect 127.0.0.1:62001，连接模拟器，

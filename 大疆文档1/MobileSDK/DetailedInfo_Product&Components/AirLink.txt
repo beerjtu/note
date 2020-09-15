@@ -1,0 +1,43 @@
+AirLink:
+describes the wireless ling between aircraft, remote controllers, hanheld cameras and mobile devices.
+1.WiFi
+2.OcuSync
+3.LightBridge
+4.Auxiliary
+
+WiFi:
+In case of Aircraft, the remote controller acts as a WiFi access point(AP) and the aircraft and mobile device join it as clients. Some aricraft asle act as the AP, allowing the mobile devive to connect directly.
+Handheld Device Osmo acts as a AP, the mobile device joins the Osmo AP as a client.
+can be customized: SSID, passward, WiFi Frequency Band(Osmo Only)
+
+OcuSync:
+Part of the LightBridge family.
+performs far better then WiFi transmission at all transmission speed.
+more effective digital compression and channel transmission technologies.
+When ..., OcuSync further than analog at 4.1mi(7km)
+Before taking off, OcuSync will automatically scan the environment and choose the Frequency Band with Lowest Interference.
+During a flightb, it sends key flight parameter back in the SDK and support a maxium download speed of  40Mb/s（5MB）for photos and videos.
+Different from WiFi(using traditional protocol stack), OcuSync uses Cross-Layer Protocol, can establish or re-establish links within 1 second.
+As well as P2P video transmission, OcuSync also support wireless connection to multiple devices.
+
+Light Bridge:
+for long range, robust aerial communication in the 2.4GHZ band.
+has 8 selectable channels. can be doned manually or left to the radio to determine what channel has the least interference.
+
+Lightbridge Accessory:
+Lightbridge2 can be integrated into airframes such as the S1000. Lightbridge2 consists of a module mounts on the aircraft and a remote controller for ground control.
+To relay remote control commands to the aircraft, and relay telemetry and video data to remotre controller.
+2 Addtional features in live video stream:
+(1)Multiple videos inputs on the aircraft can be combined into a picture in picture live video stream.
+(2)An on-screen-display(OSD) mode overlays aircraft attitude information onto the live video stream.
+
+Picture in Picture:
+The video streams from both cameras can be combined into a single live stream with one stream inside the other in Picture in Picture or PIP mode.
+
+OSD - On Screen Display:
+real time aircraft state information (like altitude, attitude etc.) is overlaid on the live video stram.
+
+Auxiliary (used simultaneously with WiFi):
+The auxiliary link is a low bandwidth, but very robust link that carries control information critical to aircraft operation only. The WiFi is higer bandwidth but is less robust.
+
+
